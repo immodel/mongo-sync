@@ -14,9 +14,11 @@ describe('mongo-sync', function() {
       .attr('username', 'string');
   
     var doc = new User({username: 'test'});
-    
+
     doc.save(function(err, user) {
       expect(err).to.be.null;
+      expect(user.get('username')).to.equal('test');
+      expect(user.get('_id')).to.equal(doc.get('_id'));
       done();
     });
   });
