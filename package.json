@@ -1,5 +1,5 @@
 {
-  "name": "mongo-sync",
+  "name": "immodel-mongo-sync",
   "version": "0.1.0",
   "description": "MongoDB sync layer for immodel",
   "main": "index.js",
