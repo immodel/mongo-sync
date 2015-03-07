@@ -1,4 +1,4 @@
-var expect = require('chai').expect;
+var assert = require('assert');
 var model = require('immodel').bootstrap();
 
 require('mongo-id')(model);
@@ -15,9 +15,9 @@ describe('mongo-sync', function() {
     var doc = new User({username: 'test'});
 
     doc.save(function(err, user) {
-      expect(err).to.be.null;
-      expect(user.get('username')).to.equal('test');
-      expect(user.get('_id')).to.equal(doc.get('_id'));
+      assert(err === null);
+      assert(user.get('username') === 'test');
+      assert(user.get('_id') === doc.get('_id'));
       done();
     });
   });

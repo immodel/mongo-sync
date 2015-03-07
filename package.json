@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/immodel/mongo-sync"
+    "url": "immodel/mongo-sync"
   },
   "keywords": [
     "mongo",
@@ -28,7 +28,6 @@
     "immodel": "^0.1.1"
   },
   "devDependencies": {
-    "chai": "^2.1.0",
     "mocha": "^2.1.0",
     "immodel": "git://github.com/immodel/immodel",
     "mongo-id": "git://github.com/immodel/mongo-id"
