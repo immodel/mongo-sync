@@ -26,7 +26,7 @@ module.exports = function(mongoUrl) {
     model.attr('_id', 'ObjectID');
     model.on('init', function(evt) {
       var doc = evt.doc;
-      doc.isNew = ! doc.doc._id;
+      doc.isNew = ! doc.value._id;
       if(doc.isNew)
         doc._id = objectid();
       

@@ -24,7 +24,8 @@
   "dependencies": {
     "monk": "^1.0.0",
     "mquery": "^1.3.0",
-    "objectid": "^3.2.0"
+    "objectid": "^3.2.0",
+    "immodel": "^0.1.1"
   },
   "devDependencies": {
     "chai": "^2.1.0",

@@ -5,7 +5,6 @@ require('mongo-id')(model);
 
 var Collection = model
   .use(require('../')('localhost/test'))
-  .attr('_id', 'ObjectID');
   
 describe('mongo-sync', function() {
   it('should work', function(done) {
