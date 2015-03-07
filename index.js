@@ -6,7 +6,7 @@ module.exports = function(mongoUrl) {
   var db = monk(mongoUrl);
   
   return function(model) {
-    require('mongo-id')(model);
+    require('immodel-mongo-id')(model);
     
     model.collection = function(name) {
       return this.use(function(model) {

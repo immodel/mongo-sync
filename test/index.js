@@ -1,7 +1,6 @@
 var assert = require('assert');
-var model = require('immodel').bootstrap();
-
-require('mongo-id')(model);
+var model = require('immodel')
+  .use(require('immodel-base'));
 
 var Collection = model
   .use(require('../')('localhost/test'))
