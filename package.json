@@ -1,6 +1,6 @@
 {
   "name": "immodel-mongo-sync",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "MongoDB sync layer for immodel",
   "main": "index.js",
   "scripts": {
