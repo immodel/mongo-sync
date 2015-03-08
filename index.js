@@ -5,26 +5,26 @@ var objectid = require('objectid');
 module.exports = function(mongoUrl) {
   var db = monk(mongoUrl);
   
-  return function(model) {
-    require('immodel-mongo-id')(model);
+  return function() {
+    require('immodel-mongo-id')(this);
     
-    model.collection = function(name) {
-      return this.use(function(model) {
-        model.collectionName = name;
+    this.collection = function(name) {
+      return this.use(function() {
+        this.collectionName = name;
       });
     };
     
-    model.db = function() {
+    this.db = function() {
       return db.get(this.collectionName);
     };
     
-    model.query = function() {
+    this.query = function() {
       return mquery(this.db());
     };
        
        
-    model.attr('_id', 'ObjectID');
-    model.on('init', function(evt) {
+    this.attr('_id', 'ObjectID');
+    this.on('init', function(evt) {
       var doc = evt.doc;
       doc.isNew = ! doc.value._id;
       if(doc.isNew)
